@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+img{
+max-width: 100%;
+width: 100%;
+vertical-align: middle;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+/* SCROLLBAR BEGINS */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00c887;
+    border-radius: 50px;
+  }
+   
+/* SCROLLBAR END */
+/* CARDS SECTION BEGINS */
+.card-box{ 
+    padding: 40px 0; 
+}
+.container{
+    width: 1170px;
+    max-width: 1170px;
+    vertical-align: middle;
+    margin: auto;
+}
+.card-box .container{
+    text-align: center;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #fff;
+  transform: scale(0.9);
+  width:30%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin: 20px 10px;
+  cursor: pointer; 
+  transition: 0.6s;
+}
+.card:hover{ 
+  transform: scale(1);
+}
+.card img{
+    height: 300px;
+    object-fit: cover;
+    width: 100%; 
+    object-position:center;
+    border-radius: 10px;
+}
+.card .card-info{
+    padding: 20px;
+    color: #000;
+}
+.card .card-info h2{
+    padding: 15px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* CARDS SECTION END */
+/* PAGINATION BEGINS  */  
+.pagination{
+    text-align: center;
+    margin: 30px 30px 60px;
+    user-select: none;
+}
+.pagination-head{
+    padding: 20px 0;
+    font-size: 25px;
+    position: relative;
+} 
+.pagination-head h1 span{
+    background: #00c887;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.pagination-head::after{
+    content: '';
+    background: linear-gradient(to right, #00c887 55%,  #000 45%);
+    height: 5px;
+    border-radius: 20px;
+    width: 50%;
+    position: absolute;
+    left: 25%; 
+    display: block; 
+    top: 100px;
+}
+.pagination li{
+    display: inline-block;
+    margin: 5px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+.pagination li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    line-height: 45px;
+}
+.pagination .previous-page, .next-page{
+    background: #00c887;
+    width: 80px;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.pagination .current-page,.dots{
+    background: #ccc;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.current-page.active{
+    background: #00c887;
+}
+.disable{
+    background: #ccc; 
+}
+/* PAGINATION END  */
+.searchbar-box{
+    text-align: center;
+    padding: 15px 0;
+}
+.searchbar-box h1{
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 48px;
+}
+.searchbar-box input{
+    width: 50%;
+    padding: 10px 30px;
+    border-radius: 50px 0 0 50px;
+    border: 2px solid #00c887;
+    border-right: 0;
+    outline: 0;
+}
+.searchbar-box button,
+.searchbar-box input{
+    height: 50px;
+    display: inline-block;
+    font-size: 20px;
+}
+.searchbar-box input::placeholder{
+    font-size: 15px;
+}
+.searchbar-box button{
+    width: 80px;
+    padding:0 10px; 
+    margin-left: -10px;
+    border-radius:0 50px 50px 0;
+    cursor: pointer;
+    background: #00c887;
+    color: #fff;
+    border:2px solid #00c887;
+} 
+/* -- RESPONSIVE BEGINS -- */
+@media screen and (max-width:990px) {
+    .container{
+        width: 100%;
+        max-width: 100%;
+        vertical-align: middle;
+    } 
+    .card:hover{
+        transform: scale(0.9);
+    }
+    .card{
+        display: block;
+        width: 100%;
+        margin: 0 10px;
+        transform: scale(0.8);
+        text-align: center;
+        margin-left: 0;
+    }
+    .pagination-head{
+        padding: 0;
+    }
+    .pagination-head h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:500px) {
+.pagination-head h1 span{
+    display:block;
+    width: 80%;
+    margin: auto;
+}
+.pagination-head::after{
+    top: 85px;
+    background: linear-gradient(to left, #fff 10%, #00c887 80%);
+}
+.card-box{
+    padding: 25px 0;
+}
+}
+/* -- RESPONSIVE BEGINS -- */
